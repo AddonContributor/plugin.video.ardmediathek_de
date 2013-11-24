@@ -26,4 +26,10 @@
   <string id="30102">ViewID</string>
   <string id="30103">Use thumb as fanart</string>
   <string id="30104">Activate subtitles (if available)</string>
+  <string id="30105">Missed a programme? (today)</string>
+  <string id="30106">Missed a programme? (yesterday)</string>
+  <string id="30107">Missed a programme? (the day before yesterday)</string>
+  <string id="30108">Missed a programme? (3 days ago)</string>
+  <string id="30109">Currently focused</string>
+  <string id="30110">Missed a programme? (4 days ago)</string>
 </strings>
