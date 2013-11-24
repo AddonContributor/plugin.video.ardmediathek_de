@@ -9,6 +9,8 @@ import xbmcgui
 import sys
 import re
 import os
+import datetime
+from datetime import date, timedelta
 
 addon = xbmcaddon.Addon()
 socket.setdefaulttimeout(30)
@@ -26,6 +28,11 @@ icon = xbmc.translatePath('special://home/addons/'+addonID+'/icon.png')
 addon_work_folder = xbmc.translatePath("special://profile/addon_data/"+addonID)
 channelFavsFile = xbmc.translatePath("special://profile/addon_data/"+addonID+"/"+addonID+".favorites")
 subFile = xbmc.translatePath("special://profile/addon_data/"+addonID+"/sub.srt")
+todayDate = datetime.datetime.now()
+yesterdayDate = date.today() - timedelta(1)
+twoDaysAgoDate = date.today() - timedelta(2)
+threeDaysAgoDate = date.today() - timedelta(3)
+fourDaysAgoDate = date.today() - timedelta(4)
 
 if not os.path.isdir(addon_work_folder):
     os.mkdir(addon_work_folder)
@@ -42,6 +49,12 @@ def index():
     addDir(translation(30011), "", 'listShowsFavs', "")
     addDir(translation(30006), "", 'listCats', "")
     addDir(translation(30007), "", 'listDossiers', "")
+    addDir(translation(30109), baseUrl+"/ard/servlet/ajax-cache/17493050/view=switch/documentId=17493062/index.html", 'listVideos', "")		
+    addDir(translation(30105), baseUrl+"/ard/servlet/ajax-cache/3517242/view=list/datum="+str(todayDate.day)+"."+str(todayDate.month)+"."+str(todayDate.year)+"/senderId=208/zeit=1/index.html", 'listVideos', "")
+    addDir(translation(30106), baseUrl+"/ard/servlet/ajax-cache/3517242/view=list/datum="+str(yesterdayDate.day)+"."+str(yesterdayDate.month)+"."+str(yesterdayDate.year)+"/senderId=208/zeit=1/index.html", 'listVideos', "")
+    addDir(translation(30107), baseUrl+"/ard/servlet/ajax-cache/3517242/view=list/datum="+str(twoDaysAgoDate.day)+"."+str(twoDaysAgoDate.month)+"."+str(twoDaysAgoDate.year)+"/senderId=208/zeit=1/index.html", 'listVideos', "")		
+    addDir(translation(30108), baseUrl+"/ard/servlet/ajax-cache/3517242/view=list/datum="+str(threeDaysAgoDate.day)+"."+str(threeDaysAgoDate.month)+"."+str(threeDaysAgoDate.year)+"/senderId=208/zeit=1/index.html", 'listVideos', "")		
+    addDir(translation(30110), baseUrl+"/ard/servlet/ajax-cache/3517242/view=list/datum="+str(fourDaysAgoDate.day)+"."+str(fourDaysAgoDate.month)+"."+str(fourDaysAgoDate.year)+"/senderId=208/zeit=1/index.html", 'listVideos', "")
     addDir(translation(30008), "", 'search', "")
     addLink(translation(30013), "", 'playLive', icon)
     xbmcplugin.endOfDirectory(pluginhandle)
