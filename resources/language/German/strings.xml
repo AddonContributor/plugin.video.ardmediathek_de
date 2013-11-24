@@ -25,4 +25,10 @@
   <string id="30101">View erzwingen</string>
   <string id="30103">Thumb als Fanart nutzen</string>
   <string id="30104">Untertitel aktivieren (falls verfügbar)</string>
+  <string id="30105">Sendung verpasst? (heute)</string>
+  <string id="30106">Sendung verpasst? (gestern)</string>
+  <string id="30107">Sendung verpasst? (vorgestern)</string>
+  <string id="30108">Sendung verpasst? (vor 3 Tagen)</string>
+  <string id="30109">Themenwoche</string>
+  <string id="30110">Sendung verpasst? (vor 4 Tagen)</string>
 </strings>
